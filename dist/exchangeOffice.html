@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../dist/output.css" rel="stylesheet">
+    <title>Exchange Office</title>
+
+</head>
+<body>
+
+        <div class="md:h-screen flex justify-center items-center bg-gray-500">
+            <div class="lg:h-[80%] w-[90%] md:w-[30%] flex flex-col justify-start items-center bg-yellow-100 rounded-xl">
+                <h1 class="mt-7 text-4xl text-black">Currency Converter</h1>
+                <div class="w-[80%]">
+                    <h2 class="mt-10 text-black text-2xl">Type in the amount</h2>
+                    <input type="number" name="" id="inputBox" class="w-full mt-8 h-[3rem] pl-5 font-semibold">
+                </div>
+
+                <div class="w-[80%]">
+                    <div class="w-full flex justify-between">
+                        <h2 class="mt-10 pl-3 text-2xl text-black">From</h2>
+                        <h2 class="mt-10 pr-4 text-2xl text-black">To</h2>
+                    </div>
+                    
+                    <div class="w-full flex flex-row box-border">
+
+                        <div class="w-[40%] h-[10rem] flex flex-row justify-center items-center">
+                            <img id="firstImage" src="./images/RSD.png" alt="" class="w-[40%] mr-1">
+                            <select name="College" id="currencyFirst" class="w-[5rem] h-[2.6rem]" onchange="imageChange()">
+                                <option value="RSD" selected hidden>RSD</option>
+                                <option value="RSD">
+                                    RSD
+                                </option>
+                                <option value="EUR">EUR</option>
+                                <option value="USD">USD</option>
+                            </select>
+                        </div>
+
+                        <div class="w-[20%] flex justify-center items-center">
+                            <img src="./images/transaction.png" alt="transaction icon" class="w-[80%]">
+                        </div>
+
+                        <div class="w-[40%] h-[10rem] flex flex-row justify-center items-center">
+                            <img id="secondImage" src="./images/USD.png" alt="" class="w-[40%] mr-1">
+                            <select name="College" id="currencySecond" class="w-[5rem] h-[2.6rem]" onchange="imageChange()">
+                                <option value="USD" selected hidden>USD</option>
+                                <option value="USD">
+                                    USD
+                                </option>
+                                <option value="EUR">EUR</option>
+                                <option value="RSD">RSD</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="w-full h-10 mt-10 text-black text-2xl">
+                        <h1 id="resultText"></h1>
+                    </div>
+
+                    <div class="w-full mt-8 text-black text-2xl">
+                        <button id="resultButton" type="submit" class="w-full mb-10 md:mb-0 p-5 bg-blue-500 rounded-md hover:bg-blue-400 transition-colors duration-300">GET EXCHANGE RATE</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <script src="exchangeOffice.js"></script>
+
+
+    
+</body>
+</html>
